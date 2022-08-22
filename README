@@ -1,0 +1,29 @@
+ipconfigstore
+
+
+BUILD
+
+  make
+
+
+USAGE
+
+  usage: ipconfigstore OPTION
+  
+   -p VERSION    Pack IP configuration
+   -u            Unpack IP configuration
+
+
+PACKING
+
+  ipconfigstore -p 2 < samples/v2/static.conf > /data/misc/ethernet/ipconfig.txt
+
+
+UNPACKING
+
+  ipconfigstore -u < /data/misc/ethernet/ipconfig.txt > ipconfig.conf
+
+
+RECOMMENDED READING
+
+  com.android.server.net.IpConfigStore
